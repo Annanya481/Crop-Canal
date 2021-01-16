@@ -58,7 +58,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 ## License 
 ![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)
 <br/>
-This project is under the Apache License. See [LICENSE](LICENSE) for Details.
+This project is under the MIT License. See [LICENSE](LICENSE) for Details.
 
 
 ## Authors
