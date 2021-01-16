@@ -41,6 +41,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 * For the frontend we've used plain HTML, CSS along with Bootstrap.
 * For Machine learning we have used Pytorch as our framework to make multiple image processing models.
 * For the backend we are using flask as our microframe work.
+* Flask RestFul for APIs
 * SQL databases to manage farmer/Trader details.
 
 ### ToDo 
