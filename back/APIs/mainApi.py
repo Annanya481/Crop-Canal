@@ -30,10 +30,10 @@ class returnImages(Resource):
         cur.execute(sql)
         for column in cur.fetchall():
             print("saving")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[7]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img1.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[8]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img2.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[9]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img3.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[10]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img4.jpg")
+            Image.frombuffer(mode="RGB", size=(500,500), data=column[8]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img1.jpg")
+            Image.frombuffer(mode="RGB", size=(500,500), data=column[9]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img2.jpg")
+            Image.frombuffer(mode="RGB", size=(500,500), data=column[10]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img3.jpg")
+            Image.frombuffer(mode="RGB", size=(500,500), data=column[11]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img4.jpg")
     
         return redirect("http://localhost:5000/tableImages")
     
