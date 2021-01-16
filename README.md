@@ -36,6 +36,10 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 <h4 align="center">Quality Check Results</h4>
 <img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Crop%20result.png">
 
+<h4 align="center">What the Traders see before Placing a bid</h4>
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Details%20after%20the%20quality%20check.png">
+   
+
 
 ## Tech Stacks:
 * For the frontend we've used plain HTML, CSS along with Bootstrap.
