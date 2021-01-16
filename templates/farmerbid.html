@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Check Bid / Notify</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/d5fba335cd.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                background-image: url('https://images.unsplash.com/photo-1508181348694-a6b50339257c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNyb3BzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: consolas;
+            }
+
+            .notcontainer{
+                width: 1000px;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .notcontainer .notcard{
+                position: relative;
+                cursor: pointer;
+            }
+
+            .notcontainer .notcard .face{
+                width: 300px;
+                height: 200px;
+                transition: 0.5s;
+            }
+
+            .notcontainer .notcard .face.face1{
+                position: relative;
+                /* background: rgb(195, 106, 207); */
+                background: #F1C40F;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                transform: translateY(100px);
+            }
+
+            .notcontainer .notcard:hover .face.face1{
+                background: #4e9e8a;
+                transform: translateY(0);
+            }
+
+            .notcontainer .notcard .face.face1 .content h3{
+                margin: 10px 0 0;
+                padding: 0;
+                color: #fff;
+                text-align: center;
+                font-size: 1.5em;
+            }
+
+            .notcontainer .notcard .face.face2{
+                position: relative;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                box-sizing: border-box;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+                transform: translateY(-100px);
+            }
+
+            .notcontainer .notcard:hover .face.face2{
+                transform: translateY(0);
+            }
+
+            .notcontainer .notcard .face.face2 .content p{
+                margin: 0;
+                padding: 0;
+            }
+
+            .notcontainer .notcard .face.face2 .content a{
+                margin: 15px 0 0;
+                display:  inline-block;
+                text-decoration: none;
+                color: rgb(94, 38, 121);
+                padding: 5px;
+                border: 1px solid #333;
+            }
+
+            .notcontainer .notcard .face.face2 .content a:hover{
+                background: #333;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container notcontainer">
+            <div class="notcard">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>Check Bid</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <form class="d-flex" method="POST">
+                            <input class="form-control me-2" type="search" placeholder="Search Using PhoneNumber" aria-label="Search" id="checkBid" name="farmerPhone" autocomplete="off">
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                        <h2>{{currentBid}} {{ traderPhone }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="notcard">
+                <div class="face face1">
+                    <div class="content">
+                        <h3>Notify Me</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <form id="notifyMeForm" onsubmit="notifyMe()" >
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="farmerName" placeholder="Farmer's Name" autocomplete="off">
+                                <input type="text" class="form-control" id="bidAmount" placeholder="Bid Amount" autocomplete="off">
+                                <button class="btn btn-outline-primary" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function notifyMe(){
+                var action_src = "http://localhost:8000/notifyfarmer/" + document.getElementById("farmerName").value + "/" + document.getElementById("bidAmount").value;
+                var your_form = document.getElementById('notifyMeForm');
+                your_form.action = action_src ;
+            }
+        </script>
+    </body>
+</html>
