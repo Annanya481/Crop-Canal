@@ -2,8 +2,8 @@
 
 <h2 align="center"> Crop-Canal - Bridging the gap between the Farmers and Traders </h2>
 
-<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Image1.png">
-<h4 align="center">Welcome Page of the Web App</h4>
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Crop-Canal%20Workflow.png">
+<h4 align="center">Crop-Canal Workflow</h4>
 
 ***
 
@@ -28,16 +28,17 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 
 ## GUI
 <h4 align="center">Accepting Farmer and Crop Details</h4>
-<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Details.png">
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Image%20form.png">
 
-<h4 align="center">Farmer uploading his crops for quality check</h4>
-<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Upload.png">
+<h4 align="center">Quality Check of the Crops</h4>
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Farmer%20Crop%20result.png">
 
-<h4 align="center">Quality Check Results</h4>
-<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Crop%20result.png">
+<h4 align="center">Trader's Home Page</h4>
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Trader%20Page.png">
 
-<h4 align="center">What the Traders see before Placing a bid</h4>
-<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/Pranav/README.md%20Images/Farmer%20Details%20after%20the%20quality%20check.png">
+<h4 align="center">Trader placing a Bid</h4>
+<img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Farmer%20Bid.png">
+
    
 
 
@@ -49,10 +50,11 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 * SQL databases to manage farmer/Trader details.
 
 ### ToDo 
+- [x] Work on Improving the UI
+- [x] Telegram integration for notifications to the farmer
 - [ ] Integrate the Frontend with the BlockChain Backend
-- [ ] Work on Improving the UI
+- [ ] Estimated cost of crop yield
 - [ ] Integrate Trader Authentication (PAN)
-- [ ] Telegram integration for notifications to the farmer
 
 
 ## License 
