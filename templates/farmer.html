@@ -1,22 +1,31 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
         <title>Farmer</title>
         <script src="https://kit.fontawesome.com/d5fba335cd.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <style>
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box; 
+            @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+            * {
+            font-family: 'Open Sans', sans-serif;
+            }
+
+            body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1508181348694-a6b50339257c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNyb3BzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
             }
 
             nav a {
-                font-size: 62px;
+                font-size: 60px;
                 color: #fff;
                 text-decoration: none;
                 padding: 20px;
@@ -34,71 +43,135 @@
                 background: #F1C40F;
             }
 
-            section {
-                background-image: url('https://images.unsplash.com/photo-1508181348694-a6b50339257c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNyb3BzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
-                background-size: cover;
-                background-position: center;
-                min-height: 100vh;
-
-            } 
-            /* Styles applied on trigger */
-            section:target {
-                opacity: 1;
+            .signupSection {
+                background:rgb(45, 156, 95);
                 position: absolute;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 10;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 800px;
+                height: 480px;
+                text-align: center;
+                display: flex;
+                color: white;
+                box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
             }
-            
-            .details{
-                width: 80%;
-                padding-left: 22vw;
-                padding-top: 10vw;
+
+            .info {
+                width: 45%;
+                background: rgba(20, 20, 20, .8);
+                padding: 30px 0;
+                border-right: 5px solid rgba(30, 30, 30, .8);
             }
-            .form-select{
-            margin-top: 50px;
-            margin-bottom: 50px;
+            .info h2 {
+                padding-top: 30px;
+                font-weight: 1000;
             }
+            .info p {
+                padding-top: 50px;
+                font-size: 20px;
+            }
+
+            .signupForm {
+                width: 70%;
+                padding: 30px 0;
+                background: #ddc563;
+                transition: .2s;
+                color: white;
+            }
+
+            .inputFields {
+                margin: 15px 0;
+                font-size: 16px;
+                font-weight: normal;
+                padding: 10px;
+                width: 250px;
+                border: 1px solid rgb(45, 156, 95);
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                background: rgba(20, 20, 20, .2);
+                color: white;
+                outline: none;
+            }
+
+            .noBullet {
+                list-style-type: none;
+                padding: 0;
+                color: white;
+            }
+
+            #join-btn {
+                border: 1px solid rgb(10, 180, 87);
+                background:  rgb(221, 184, 62);
+                font-size: 18px;
+                color: white;
+                margin-top: 20px;
+                padding: 10px 50px;
+                cursor: pointer;
+                transition: .4s;
+            }
+            #join-btn:hover {
+                background:  rgb(222, 224, 58);
+                padding: 10px 80px;
+            }
+            ::placeholder{
+                color: white;
+            }
+
+            .inputFields option{
+            color: white;
+            background-color: rgb(27, 85, 53);
+            }
+
         </style>
     </head>
     <body>
-    
         <nav>
             <a href="index"><i class="fas fa-home"></i></a>
             <a href="farmer"><i class="fas fa-tractor"></i></a>
-            
+            <a href="tableImages"><i class="fas fa-rupee-sign"></i></a>
+            <!--<a href="#fourth"><i class="far fa-address-card"></i></a>-->
         </nav>
+        <div class="signupSection">
+            <div class="info">
+              <h2>Please Note!</h2>
+              <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+              <p>If you would like to receive telegram notifications please provide your telegram username!</p>
+            </div>
+            <form action="#" method="POST" class="signupForm" name="signupform">
+              <!--<h2>Sign Up</h2>-->
+              <ul class="noBullet">
+                <li>
+                  <label for="name"></label>
+                  <input type="text" class="inputFields" id="name" name="nm" placeholder="Name" required autocomplete="off"/>
+                </li>
+                <li>
+                  <label for="number"></label>
+                  <input type="text" class="inputFields" id="number" name="ph" placeholder="Phone Number" required autocomplete="off"/>
+                </li>
+                <li>
+                  <label for="price"></label>
+                  <input type="text" class="inputFields" id="price" name="pr" autocomplete="off" placeholder="Base Price" required/>
+                </li>
+                <li>
+                    <label for="price"></label>
+                    <input type="text" class="inputFields" id="price" name="quantity" placeholder="quantity" required/>
+                  </li>
 
-        <section id= 'second'>
-                <form class="content details" action="" method='POST'>
-                     <div class="form-group">
-                         <label for=""></label>
-                         <input type="text" class="form-control" id="name" name="nm" autocomplete="off" placeholder="Name">
-                     </div>
-                     <div class="form-group">
-                         <label for=""></label>
-                         <input type="text" class="form-control" id="num" name="ph" autocomplete="off" placeholder="Phone">
-                     </div>
-                     <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" id="num" name="pr" autocomplete="off" placeholder="basePrice">
-                    </div>
-
-                    <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" id="num" name="quantity" autocomplete="off" placeholder="Quantity">
-                    </div>
-                
-                    <select class="form-select" aria-label="Default select example" name="Time">
+                <li>
+                    <select class="inputFields" name="Time">
                         <option selected>Select Time Frame</option>
                         <option value="1">24hrs</option>
                         <option value="2">48hrs</option>
                         <option value="3">72hrs</option>
                     </select>
-
-                     <button type="submit" class="btn btn-primary">Submit</button>
-                 </form>
-        </section>
+                </li>
+                <li id="center-btn">
+                  <input type="submit" id="join-btn" name="join" alt="Join" value="Join">
+                </li>
+              </ul>
+            </form>
+        </div>
     </body>
 </html>
