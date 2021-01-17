@@ -3,7 +3,7 @@
 <h2 align="center"> Crop-Canal - Bridging the gap between the Farmers and Traders </h2>
 
 <img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Crop-Canal%20Workflow.png">
-<h4 align="center">Crop-Canal Workflow</h4>
+<h4 align="center">Crop Canal Workflow</h4>
 
 ***
 
@@ -15,7 +15,7 @@
 
 
 ### Proposed Solution
-Team DoubleAPI have come up with **Crop-Canal**, a web portal that helps improve the logistics innvolved in the communications between the traders and farmers.
+Team DoubleAPI have come up with **Crop Canal**, a web portal that helps improve the logistics innvolved in the communications between the traders and farmers.
 This web-portal helps reduce the gap between the market and the farmers. Our entire system is based on trust. The trader entrusts our application to impose a quality check on the crops provided by the farmer and the farmer in turn trusts to get his crop sold at the best possible price which is ensured through the bidding system. 
 
 
@@ -39,7 +39,12 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 <h4 align="center">Trader placing a Bid</h4>
 <img src="https://github.com/Aradhya-Tripathi/Crop-Canal/blob/main/Images%20readme/Farmer%20Bid.png">
 
-   
+## Requirements:
+All the [requirements](requirements.txt) and dependencies need to be installed. 
+To install run:
+```python
+$ pip install -r requirements.txt
+```
 
 
 ## Tech Stacks:
@@ -48,7 +53,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 * For the backend we are using flask as our microframe work.
 * Flask RestFul for APIs
 * SQL databases to manage farmer/Trader details.
-* Ethereum Virtual Machine
+* Ethereum Virtual Machine for the BlockChain(& Solidity for the Smart Contracts)
 
 ## ToDo 
 - [x] Work on Improving the UI
@@ -63,6 +68,10 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 <br/>
 This project is under the MIT License. See [LICENSE](LICENSE) for Details.
 
+## Other Resources
+[PowerPoint Presentation](https://docs.google.com/presentation/d/15hc5mVAGPA01AotWe66vrmZE10-pmAW0txViZmdySoY/edit?usp=sharing)
+<br/>
+[Youtube: HackNITP Submission](https://www.youtube.com/watch?v=L-p2nHbDoxM)
 
 ## Contributors
 <table>
