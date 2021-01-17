@@ -20,7 +20,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-family: consolas;
+                font-family: 'Montserrat';
             }
 
             .notcontainer{
@@ -116,7 +116,9 @@
                             <input class="form-control me-2" type="search" placeholder="Search Using PhoneNumber" aria-label="Search" id="checkBid" name="farmerPhone" autocomplete="off">
                             <button class="btn btn-outline-primary" type="submit">Search</button>
                         </form>
-                        <h2>{{currentBid}} {{ traderPhone }}</h2>
+                        <br />
+                        <h5>Current Bid: {{currentBid}} </h5><br />
+                        <h5>Trader's number: {{ traderPhone }}</h5>
                     </div>
                 </div>
             </div>
@@ -130,8 +132,11 @@
                     <div class="content">
                         <form id="notifyMeForm" onsubmit="notifyMe()" >
                             <div class="mb-3">
+                                <label></label>
                                 <input type="text" class="form-control" id="farmerName" placeholder="Farmer's Name" autocomplete="off">
+                                <label></label>
                                 <input type="text" class="form-control" id="bidAmount" placeholder="Bid Amount" autocomplete="off">
+                                <br />
                                 <button class="btn btn-outline-primary" type="submit">Submit</button>
                             </div>
                         </form>
