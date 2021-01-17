@@ -21,7 +21,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 
 ### Functioning of the WebApp
 1. The farmer will upload 5 pictures of their crops to the WebApp. These pictures are then fed into the Crop Analyser Model which not only identifies the crop, the farmer intends to sell, but also checks for the quality of the crop, and they are assigned a score.
-2. The farmer can then quote a desired price at which he is willing to sell his crop. This price will not be revealed to the traders.
+2. The farmer will then quote a desired base price at which he is willing to sell his crop and this price will be revealed to the traders.
 3. The traders who are interested in buying the crops can start bidding for the crops. Once the bidding amount reaches the price quoted by the farmer, he will receive a message on *Telegram* regarding the same. It is then upto the farmer to decide whether to close the auction or let it continue.
 
 
@@ -49,7 +49,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 * Flask RestFul for APIs
 * SQL databases to manage farmer/Trader details.
 
-### ToDo 
+## ToDo 
 - [x] Work on Improving the UI
 - [x] Telegram integration for notifications to the farmer
 - [ ] Integrate the Frontend with the BlockChain Backend
@@ -63,10 +63,10 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 This project is under the MIT License. See [LICENSE](LICENSE) for Details.
 
 
-## Authors
+## Contributors
 <table>
   <tr>
-    <td align="center"><img src="" width="100px;" height="100px;" alt=""/><br /><sub><b>Annanya Pandey</b></sub></a><br /><p align="center">
+    <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQFN3BSWAiSSaw/profile-displayphoto-shrink_400_400/0/1603951436531?e=1616630400&v=beta&t=C880q3dEIH1oj1jKqKRiGPctAqshK4xI49heIhzXQTU" width="100px;" height="100px;" alt=""/><br /><sub><b>Annanya Pandey</b></sub></a><br /><p align="center">
       <p align="center">
         <a href="https://www.linkedin.com/in/annanya-pandey-7a9043195/" alt="Linkedin">
           <img src="http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width = "30">
@@ -76,7 +76,7 @@ This project is under the MIT License. See [LICENSE](LICENSE) for Details.
         </a>
       </p>
     </td>
-    <td align="center"><img src="" width="100px;" height="100px;" alt=""/><br /><sub><b>Aradhya Tripathi</b></sub></a><br /><p align="center">
+    <td align="center"><img src="https://user-images.githubusercontent.com/70643852/104842811-3e42f100-58ed-11eb-9d0d-7476d7a9de84.png" width="100px;" height="100px;" alt=""/><br /><sub><b>Aradhya Tripathi</b></sub></a><br /><p align="center">
       <p align="center">
         <a href="https://www.linkedin.com/in/aradhya-tripathi-57312a193/" alt="Linkedin">
           <img src="http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width = "30">
@@ -86,7 +86,7 @@ This project is under the MIT License. See [LICENSE](LICENSE) for Details.
         </a>
       </p>
     </td>
-    <td align="center"><img src="" width="100px;" height="100px;" alt=""/><br /><sub><b>Pranav B Kashyap</b></sub></a><br /><p align="center">
+    <td align="center"><img src="https://media-exp1.licdn.com/dms/image/C5603AQHb5g33WP2K_Q/profile-displayphoto-shrink_400_400/0/1601352727491?e=1616630400&v=beta&t=Kwe_LOyyDrKCUP89Ub_t-5Wvt7AezSUb84mByKM96qs" width="100px;" height="100px;" alt=""/><br /><sub><b>Pranav B Kashyap</b></sub></a><br /><p align="center">
       <p align="center">
         <a href="https://www.linkedin.com/in/pranav-b-kashyap-1994001b6/" alt="Linkedin">
           <img src="http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width = "30">
