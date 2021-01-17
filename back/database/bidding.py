@@ -7,7 +7,7 @@ def createdb():
     conn = sqlite3.connect("/home/aradhya/Desktop/hacks/NITP/bidding.db")
     cur = conn.cursor()
 
-    sql = "CREATE TABLE IF NOT EXISTS Bidding(FarmerPhone TEXT, TraderPhone TEXT, BiddingAmount INT)"
+    sql = "CREATE TABLE IF NOT EXISTS Bidding(FarmerPhone TEXT, TraderPhone TEXT, BiddingAmount INT, TraderPan INT)"
     try:
         cur.execute(sql)
 
@@ -16,21 +16,21 @@ def createdb():
     
     return cur, conn
 
-def insertdb(farmerPhone, traderPhone, bidAmount):
+def insertdb(farmerPhone, traderPhone, bidAmount, traderpan):
     cur, conn = createdb()
-    sql = f"INSERT INTO Bidding VALUES{farmerPhone, traderPhone, bidAmount}"    
+    sql = f"INSERT INTO Bidding VALUES{farmerPhone, traderPhone, bidAmount, traderpan}"    
     cur.execute(sql)
     conn.commit()
 
-def updatedb(farmerPhone, traderPhone, bidAmount):
+def updatedb(farmerPhone, traderPhone, bidAmount, traderpan):
     cur, conn = createdb()
-    cur.execute("SELECT * FROM Bidding")
+    cur.execute(f"SELECT * FROM Bidding WHERE FarmerPhone='{farmerPhone}'")
     cursorlist = cur.fetchall()
 
     if len(cursorlist) == 0:
-        insertdb(farmerPhone, traderPhone, bidAmount)
+        insertdb(farmerPhone, traderPhone, bidAmount, traderpan)
 
-    print(farmerPhone, traderPhone, bidAmount)
+    print(farmerPhone, traderPhone, bidAmount, traderpan)
     sql = f"SELECT * FROM Bidding WHERE FarmerPhone='{farmerPhone}'"
     cur.execute(sql)
     if len(cur.fetchall())>0:
@@ -43,13 +43,13 @@ def updatedb(farmerPhone, traderPhone, bidAmount):
 
 if __name__ == "__main__":
     createdb()
-    insertdb("8939693092", "932932932", "1000")
+    insertdb("8939693092", "932932932", "1000", "asdlknas")
     # insertdb("0000000", "932932932", "2000")
     q = "SELECT * FROM Bidding"
     cur.execute(q)                          # which one to trigger first search db for name initially 
     print(cur.fetchall())
 
-    updatedb("8939693092", "12348092340", "2000")
+    updatedb("8939693092", "12348092340", "2000", "asldkasdn")
     # updatedb("0000000", "12348092340", "3000")
     # searchdb("aradhya")
 
