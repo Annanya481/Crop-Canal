@@ -48,6 +48,7 @@ This web-portal helps reduce the gap between the market and the farmers. Our ent
 * For the backend we are using flask as our microframe work.
 * Flask RestFul for APIs
 * SQL databases to manage farmer/Trader details.
+* Ethereum Virtual Machine
 
 ## ToDo 
 - [x] Work on Improving the UI
