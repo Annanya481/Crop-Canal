@@ -30,10 +30,10 @@ class returnImages(Resource):
         cur.execute(sql)
         for column in cur.fetchall():
             print("saving")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[8]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img1.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[9]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img2.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[10]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img3.jpg")
-            Image.frombuffer(mode="RGB", size=(500,500), data=column[11]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img4.jpg")
+            Image.frombytes(mode="RGB", size=(500,500), data=column[8]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img1.jpg")
+            Image.frombytes(mode="RGB", size=(500,500), data=column[10]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img2.jpg")
+            Image.frombytes(mode="RGB", size=(500,500), data=column[11]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img3.jpg")
+            Image.frombytes(mode="RGB", size=(500,500), data=column[12]).save("/home/aradhya/Desktop/hacks/NITP/showImages/img4.jpg")
     
         return redirect("http://localhost:5000/tableImages")
     
@@ -57,12 +57,12 @@ def notify(farmerName, bidAmount, traderPhone):
         if HIGHESTBID == bidAmount or HIGHESTBID<bidAmount:
             chatId = bot.getChatId(farmerName)
             print(bot.getName())
-            bot.sendMessage(chatId, f"Hey the this is the notifcation for the higestbit placed by {traderPhone} bid amount is {bidAmount}")
+            bot.sendMessage(chatId, f"Hey this is the notifcation for the higestbit placed by {traderPhone} bid amount is {bidAmount}")
             print("message sent")
 
 
 
-def placeBid(farmerName, farmerPhone, traderPhone, bidAmount):
+def placeBid(farmerName, farmerPhone, traderPhone, bidAmount, traderpan):
     conn = sqlite3.connect("/home/aradhya/Desktop/hacks/NITP/farmerdb.db")
     cur  = conn.cursor()
 
@@ -72,9 +72,8 @@ def placeBid(farmerName, farmerPhone, traderPhone, bidAmount):
         startTime = datetime.datetime.strptime(i[5], "%c")
         timeFrame = datetime.datetime.strptime(i[6], "%c")
         if startTime < timeFrame:
-    
             notify(farmerName, bidAmount, traderPhone)
-            updatedb(farmerPhone, traderPhone, bidAmount)
+            updatedb(farmerPhone, traderPhone, bidAmount, traderpan)
     
 
     return redirect("http://localhost:5000/tableImages")
@@ -91,14 +90,14 @@ class notifications(Resource):
 
 
 class bid(Resource):
-    def get(self, farmerName, farmerPhone, traderPhone, bidAmount):
-        result = placeBid(farmerName, farmerPhone, traderPhone, bidAmount)
+    def get(self, farmerName, farmerPhone, traderPhone, bidAmount, TraderPan):
+        result = placeBid(farmerName, farmerPhone, traderPhone, bidAmount, TraderPan)
         return redirect("http://localhost:5000/tableImages")
 
 
 api.add_resource(returnImages, "/showimages/<string:name>")     
 api.add_resource(chechBid, "/checkbid/<string:farmerPhone>")
-api.add_resource(bid, "/placebid/<string:farmerName>/<string:farmerPhone>/<string:traderPhone>/<string:bidAmount>")
+api.add_resource(bid, "/placebid/<string:farmerName>/<string:farmerPhone>/<string:traderPhone>/<string:bidAmount>/<string:TraderPan>")
 api.add_resource(notifications, "/notifyfarmer/<string:farmerName>/<string:desiredBid>")
 
 if __name__ == "__main__":
